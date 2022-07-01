@@ -1,5 +1,5 @@
 //REACT ROUTER DOM
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 //CONTEXT HOOK
 import { useUserContex } from "components/UserContext";
 
@@ -7,11 +7,26 @@ import { useUserContex } from "components/UserContext";
 export default function Register() {
 
   const { 
-    signInUser, 
-    error,
+    signInUser,
+    user, 
+    error, setError,
     email, setEmail, 
     password, setPassword 
   } = useUserContex();
+
+  const navigate = useNavigate();
+
+  const handdleSignIn = async (e) => {
+    e.preventDefault();
+    setError("");
+    await signInUser();
+    
+  };
+
+  if (user) {
+    navigate(`/main/${user}`);
+  };
+  
 
   return (
     <>
@@ -23,7 +38,7 @@ export default function Register() {
           className="font-bold text-lg">
             Crie sua conta
         </h1>
-        <form onSubmit={signInUser} className="flex flex-col">
+        <form onSubmit={handdleSignIn} className="flex flex-col">
           <label> Digite seu email </label>
           <input
             className="border-2 my-2 border-black px-2 py-1 rounded-md"

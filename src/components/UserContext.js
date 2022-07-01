@@ -29,18 +29,16 @@ function UserContextProvedor({ children }) {
   const [user, setUser] = useState("");
   const [error, setError] = useState("");
 
-  const signInUser = (e) => {
-    e.preventDefault();
+  const signInUser = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((credential) => {
+        setUser(credential.user.uid);
+        console.log("creatin user")
         setDoc(doc(db, "usersDB", credential.user.uid), {
           id: credential.user.uid,
           email: email,
           tasks: [],
         });
-        window.location.replace( `http://${window.location.host}/main/${credential.user.uid}` );
-        setPassword("");
-        setEmail("");
       })
       .catch((err) => {
         switch (err.message) {
@@ -79,8 +77,7 @@ function UserContextProvedor({ children }) {
     signInWithEmailAndPassword(auth, email, password)
       .then((credential) => {
         setUser(credential.user.uid);
-        setPassword("");
-        setEmail("");
+       
       })
       .catch((err) => {
         switch (err.message) {
