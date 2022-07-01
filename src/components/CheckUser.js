@@ -21,4 +21,4 @@ const CheckUser = ({ children }) => {
   return children;
 };
 
-export default CheckUser;
+ CheckUser;
