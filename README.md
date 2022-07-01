@@ -201,7 +201,7 @@ export default function Main() {
 
 I think thats it! I know i still have alot to learned, but ive enjoyed using react and all those cool libraries. And did some decent progress in 2 months of programing! 
 
-Any sujections, or pull requests.. Be my guest.. or add me on [linkedin](https://www.linkedin.com/in/paulo-rafael-faria-dos-santos-a2ba65235/). so we can talk!! =)
+Any sujections, or pull requests.. Be my guest.. or add me on [linkedin](https://www.linkedin.com/in/paulo-faria-a2ba65235/). so we can talk!! =)
 
 Thanks for your time!
 
@@ -402,6 +402,6 @@ export default function Main() {
 
 Acho que é isso. Sei que tenho muito o que aprender e melhorar, mas tenho gostado muito de trabalhar com react e essas bibliotecas. Acredito ter feito um progresso muito bom em 2 meses de programação!
 
-Quaisquer sugestões ou pull requests .. são bemn vindos. Ou me add no [linkedin](https://www.linkedin.com/in/paulo-rafael-faria-dos-santos-a2ba65235/) para conversarmos. 
+Quaisquer sugestões ou pull requests .. são bemn vindos. Ou me add no [linkedin](https://www.linkedin.com/in/paulo-faria-a2ba65235/) para conversarmos. 
 
 Obrigado pelo seu tempo =)!
