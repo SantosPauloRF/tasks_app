@@ -1,27 +1,24 @@
-import { useNavigate } from 'react-router-dom';
-import {useUserContex} from "../components/UserContext"
-import { auth } from '../firebaseCofig';
+
+//REACT ROUTER DOM
+import { useNavigate } from "react-router-dom";
+import { useUserContex } from "../components/UserContext";
+//FIREBASE LIBS
+import { auth } from "../firebaseCofig";
 import { onAuthStateChanged } from "firebase/auth";
 
-const CheckUser = ({children}) => {
-
+const CheckUser = ({ children }) => {
   const navigate = useNavigate();
-  const {setUser} = useUserContex();
+  const { setUser } = useUserContex();
 
-  onAuthStateChanged (auth, (currentUser) => {
-    
+  onAuthStateChanged(auth, (currentUser) => {
     if (currentUser) {
-      
-      setUser (currentUser.uid);
-      
+      setUser(currentUser.uid);
     } else {
-      navigate("/")
+      navigate("/");
     }
   });
 
+  return children;
+};
 
-  return children
-  
-}
-
-export default CheckUser
+export default CheckUser;
