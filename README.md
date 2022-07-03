@@ -8,19 +8,22 @@
 
 Welcome to my page!
 
-I´ve been doing a project that adds a bunch of knowlodge to myself, but is a paid project and i cant show it here. So i made this simple app to show some of the stuff ive been working on. 
+I was recently been involved in a paid project for the first time since I started my journey in programming. As I couldn’t showcase my progress and final results here, I decided to create a simple app to showcase what I’ve learned with this project and how I can apply these skills
 
-You can watch a resume in this youtube link (sorry for the bad english, was 3 am and i was very tired lol) :
+You can watch a short clip on Youtube (I must advise you - I normally work on my projects late at night and English is not my first language so please excuse me if my accent is heavy or if I sound tired lol):
 
 
 [![Youtube video](src/images/yt.jpg)](https://youtu.be/t1uPcsH0cVs "Youtube video")
 
 Link for the live app [HERE](https://task-app-23bd2.web.app/) 
  
+Something I mentioned in my video is, I only started programming around mid-April 2022 and I didn’t even know what react was. All I had was the willingness to learn. Then I was invited to lead on a paid project with little to zero knowledge because they were impressed with how much I had learned by myself, within my own time and out of my own interest. 
+I was glad to have given this opportunity but it was incredibly challeging due to the lack of knowledge. However, I pressed on, invested a lot of time into learing about the different libraries, features, languages and project managemen to get where I am today and I’m proud of my progress so far. 
+As I cant show you the project, I made this new one in the past 3 days.  
 
-As i said in the video, i started progaming mid april so that wil bem 2 and half months from now ( today is july 1st) and when i started i didnt even know what react was! Had to strugle with alot of information e go chase alot of solutions to this project. Was a hard task do a big project with almost 0 knowlodge of the library but it end up very well and i am very proud of what i achive. So in the last 3 days i made this little project to show a bit some of the features. Gonna point it out some of them:
+Let me show you a few things I’ve picked up along the way! 
 
-Was my first time using Tailwind css! 
+My first time using Tailwind css! 
 
 👇
 ```html
@@ -34,7 +37,7 @@ Was my first time using Tailwind css!
         <form onSubmit={handdleLogin} className="flex flex-col">
         ...
 ```        
-Even thought at first glance can be a bit messy and overwhelming, tailwind is AWESOME. It makes the project goes way faster as you can type all the styles you want to aplly directly in class names.
+Even though Tailwind can be overwhelming at first, I think it is AWESOME. It allows me to find the styles quickly and apply them directly to the class names.
 
 React router dom!
 
@@ -66,7 +69,9 @@ React router dom!
     };
     ...
 ```
-Setting up all the routes with react router dom. It almost comes naturaly at this point. Make the app way more organized and faster. Also some very usefull hooks like useParamans ( to pass out parameters using the url), useNavigate ( to make ancors from a page to another ). I set up the  main page using params, as each person that login the app will have your own page (wich will be your token). But nobody will be able to access couse i did route protection in the ``` <CheckUser />``` component.
+
+Setting up all the routes with react router dom. It almost comes naturally at this point. It makes the app faster and more organised, it has many usefull hooks like useParamams (to transfer parameters using the url), useNavigate (to create anchors from page to page). I set up the main page using params, as each user that logs into the app will have their own page (which will be their token). However, nobody else will be able to access because I made a protection route making the ```` <CheckUser /> ```` component.
+
 
 👇
 
@@ -91,7 +96,7 @@ onAuthStateChanged(auth, (currentUser) => {
 export default CheckUser;
 
 ```
-````onAuthStateChanged```` is a firebase functionality that keeps watching any change to a user inside of your app. So if somebody tries to access a page with diferent token and isnt loged in, will be redirect to the login page. 
+````onAuthStateChanged```` is a firebase functionality that tracks any change to the user’s activities within the App. So, if a user tries to access the page with a diferent token and it isn’t logged in, they will be redirect to the login page. 
 
 Absolute paths:
 
@@ -116,7 +121,7 @@ Just setting up this jsconfig.json file:
 
 ```
 
-Wich makes all the file pathing inside of your project more clean, clear and scalable to work with more people. So i setup my "src" folder as the beggining of my project, then i could use the path for everthing based in that folder. 
+Wich makes all the file pathing inside of your project more clean, clear and scalable to work with more people. So i setup my "src" folder as the beggining point of my project, then i could use the path for everthing based in that folder. 
 
 Firebase:
 
@@ -135,7 +140,7 @@ You're about to initialize a Firebase project in this directory:
 
 ````
 
-Used Auth metods for autentication, Firestore for database and hosting, to have my project online. One of tha best SaaS that we have around!
+Auth metods for autentication, Firestore for database and firebase hosting to have my project online. One of tha best SaaS that we have around!
 
 UseContext hook for functions, states and component management. Extensive use of useState and other react hooks like useEffect, useRef etc.
 
